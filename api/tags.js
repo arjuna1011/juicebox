@@ -9,11 +9,11 @@ tagsRouter.use((req, res, next) => {
     next();
 });
 
-tagsRouter.get('/', (req, res) => {
-    // const posts = await getAllPosts();
+tagsRouter.get('/', async (req, res) => {
+    const tags = await getAllTags();
 
     res.send({
-        "tags": []
+        tags
     }) ;
 }) ;
 

@@ -9,11 +9,11 @@ postsRouter.use((req, res, next) => {
     next();
 });
 
-postsRouter.get('/', (req, res) => {
-    // const posts = await getAllPosts();
+postsRouter.get('/', async (req, res) => {
+    const posts = await getAllPosts();
 
     res.send({
-        "posts": []
+        posts
     }) ;
 }) ;
 
